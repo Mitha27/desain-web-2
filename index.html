@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello World</title>
+  <link href='./style.css' rel='stylesheet'>
+  <style>
+    *{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;  
+    }
+    .tengah{
+    display: flex;
+    justify-self: center;
+    }
+    .card{
+    width: 40%;
+    box-shadow: 0 4px 8px 8px rgba(0,0,0,0.3);
+    }
+    .cardbody{
+    padding: 2px 16px;
+    }
+    .cardfooter{
+    padding: 8px;
+    background-color: palevioletred;
+    display: flex;
+    justify-content: right;
+    }
+    .card>h2{
+    padding: 2px 16px;
+    }
+    #hasil{
+    width: 100%;
+    height: 200px;
+    background-color: #c0c0c0;
+    margin: 20px 0px;
+    padding: 10px 10px;
+    
+    }
+    label{
+    font-size: 14px;
+    font-weight: bold;
+    }
+    <input[type="text"]{
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0px;
+    }
+    button{
+    border: none;
+    border-radius: 8px;
+    background-color: aliceblue;
+    color: palevioletred;
+    font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="tengah">
+  </div class="card">
+
+  <h2>Hitung luas persegi</h2>
+
+  <div class="carbody"> 
+  <form>
+    <label>Nilai Panjang</label>
+    <input type="text" id="nPJ">
+
+    <label>Nilai Lebar</label>
+    <input type="text" id="nLB">
+
+    <button type="button" onclick="Hitungluas()">Hitung Luas</button>
+
+  </form>
+
+ <DIV ID="Hasil">Hasil Hitung Luas Persegi</DIV>
+</div>
+<div class="cardfooter">
+
+
+
+
+  <script>
+function Hitungluas(){
+  let pj = document.getElementById("nPJ").value
+  let lb = document.getElementById("nLB").value
+  
+let LU = pj*lb
+let PJLB=parseFloat (pj) +Number (lb)
+let KLL = 2*(pj+lb)
+
+
+
+let hsl = "Hitung Luas Persegi dengan Nilai<br>"
+    hsl+= "Panjang = "+ pj +"cm;<br>Lebar = "+ lb + "cm;<br>"
+    hsl+= "Luas ="+pj + "X" + lb
+    hsl+= "Luas ="+ LU + "cm<sup>2</sup><br>"
+    hsl+= "Hitung Keliling Persegi<br>"
+    hsl+= "Keliling = 2 X (Panjang = Lebar)<br>"
+    hsl+= "Keliling = 2 X ("+ pj + "+ " + lb + ")<br>"
+    hsl+= "Keliling = 2 X " + PJLB + "<br>"
+    hsl+= "Keliling = " + KLL + "cm<br>"
+ document.getElementById("Hasil").innerHTML = hsl 
+}
+  </script>
+</body>
+</html>
+
